@@ -10,6 +10,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties storage_1json__JsonSchema="https://json.schemastore.org/asmdef" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

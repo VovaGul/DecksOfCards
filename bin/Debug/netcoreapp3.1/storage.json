@@ -6,24 +6,20 @@
     },
     "Cards": [
       {
-        "name": "7 трефы",
-        "SeniorityInSorting": 9
-      },
-      {
-        "name": "2 червы",
-        "SeniorityInSorting": 2
-      },
-      {
         "name": "3 пики",
         "SeniorityInSorting": 5
       },
       {
-        "name": "5 бубны",
-        "SeniorityInSorting": 7
-      },
-      {
         "name": "8 трефы",
         "SeniorityInSorting": 12
+      },
+      {
+        "name": "Шут черный",
+        "SeniorityInSorting": 55
+      },
+      {
+        "name": "5 бубны",
+        "SeniorityInSorting": 7
       },
       {
         "name": "валет пики",
@@ -34,16 +30,20 @@
         "SeniorityInSorting": 14
       },
       {
-        "name": "король бубны",
-        "SeniorityInSorting": 20
+        "name": "2 червы",
+        "SeniorityInSorting": 2
       },
       {
         "name": "Шут красный",
         "SeniorityInSorting": 54
       },
       {
-        "name": "Шут черный",
-        "SeniorityInSorting": 55
+        "name": "король бубны",
+        "SeniorityInSorting": 20
+      },
+      {
+        "name": "7 трефы",
+        "SeniorityInSorting": 9
       }
     ],
     "IsSorted": false

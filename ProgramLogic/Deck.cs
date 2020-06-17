@@ -69,7 +69,7 @@ namespace DecksOfCards
             if (verifiedCards.Distinct().Count() < verifiedCards.Count)
             {
                 throw new ArgumentException
-                    ("В колоде присутствуют дубликаты");
+                    ("В колоде присутствуют дубликаты по имени");
             }
         }
 
@@ -84,7 +84,7 @@ namespace DecksOfCards
 
         private bool CheckForSorting(List<Card> verifiedCards)
         {
-            return verifiedCards.SequenceEqual(SortAscending().Cards);
+            return verifiedCards.SequenceEqual(SortAscending(verifiedCards));
         }
 
         public Deck Mix()
@@ -107,8 +107,14 @@ namespace DecksOfCards
 
         public Deck SortAscending()
         {
-            Cards.Sort();
+
+            Cards = SortAscending(Cards);
             return this;
+        }
+
+        private static List<Card> SortAscending(List<Card> decks)
+        {
+            return decks.OrderBy(x => x).ToList();
         }
 
         public override string ToString()

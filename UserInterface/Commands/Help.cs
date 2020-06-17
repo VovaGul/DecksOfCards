@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 
 namespace DecksOfCards
@@ -23,19 +24,23 @@ namespace DecksOfCards
                 switch (command)
                 {
                     case "get":
+                    case "g":
                         GetHelp();
                         break;
                     case "getall":
+                    case "gl":
                         GetAllHelp();
                         break;
                     case "mix":
+                    case "m":
                         MixHelp();
                         break;
                     case "sort":
+                    case "s":
                         SortHelp();
                         break;
                     default:
-                        Console.WriteLine();
+                        Console.WriteLine("такой команды не существует");
                         break;
                 }
             }

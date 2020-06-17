@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Таро",
+    "Id": {
+      "id": 422335352
+    },
+    "Cards": [
+      {
+        "name": "7 трефы",
+        "SeniorityInSorting": 9
+      },
+      {
+        "name": "2 червы",
+        "SeniorityInSorting": 2
+      },
+      {
+        "name": "3 пики",
+        "SeniorityInSorting": 5
+      },
+      {
+        "name": "5 бубны",
+        "SeniorityInSorting": 7
+      },
+      {
+        "name": "8 трефы",
+        "SeniorityInSorting": 12
+      },
+      {
+        "name": "валет пики",
+        "SeniorityInSorting": 13
+      },
+      {
+        "name": "дама трефы",
+        "SeniorityInSorting": 14
+      },
+      {
+        "name": "король бубны",
+        "SeniorityInSorting": 20
+      },
+      {
+        "name": "Шут красный",
+        "SeniorityInSorting": 54
+      },
+      {
+        "name": "Шут черный",
+        "SeniorityInSorting": 55
+      }
+    ],
+    "IsSorted": false
+  },
+  {
+    "name": "Уно",
+    "Id": {
+      "id": 527554650
+    },
+    "Cards": [
+      {
+        "name": "5 желтая",
+        "SeniorityInSorting": 25
+      },
+      {
+        "name": "2 синяя",
+        "SeniorityInSorting": 4
+      },
+      {
+        "name": "+4 бесцветный",
+        "SeniorityInSorting": 39
+      },
+      {
+        "name": "разворот красный",
+        "SeniorityInSorting": 41
+      },
+      {
+        "name": "разворот синий",
+        "SeniorityInSorting": 42
+      },
+      {
+        "name": "+4 синий",
+        "SeniorityInSorting": 40
+      },
+      {
+        "name": "любое действие",
+        "SeniorityInSorting": 50
+      }
+    ],
+    "IsSorted": false
+  }
+]

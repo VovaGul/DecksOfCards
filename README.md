@@ -24,7 +24,7 @@
 
 вывести все колоды:
 
-`DecksOfCards.exe getall 422335352`
+`DecksOfCards.exe getall`
 
 вывести конкретную колоду:
 

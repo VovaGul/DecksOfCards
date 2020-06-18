@@ -91,10 +91,10 @@ namespace DecksOfCards
         private void AddHelp()
         {
             var sb = new StringBuilder();
-            sb.AppendLine("Использование: DecksOfCards.exe mix <файл1> <файл2> ... <файлN>");
+            sb.AppendLine("Использование: DecksOfCards.exe add <файл1> <файл2> ... <файлN>");
             sb.AppendLine("");
             sb.AppendLine("Пареметры:");
-            sb.AppendLine(" файл   путь до файла с описанием колод, которые нужно создать");
+            sb.AppendLine(" файл   путь до файла с описанием колод, которые нужно создать. Шаблон файла описан в Readme.md");
         }
 
         private void MixHelp()

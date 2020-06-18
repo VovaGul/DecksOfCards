@@ -8,6 +8,18 @@ namespace DecksOfCards
     public class JSONFileStorage : IStorage
     {
         private readonly string path = @"storage.json";
+        private readonly JsonSerializerSettings settings;
+
+        public JSONFileStorage()
+        {
+            settings = new JsonSerializerSettings();
+        }
+
+        public JSONFileStorage(string path, JsonSerializerSettings settings)
+        {
+            this.path = path;
+            this.settings = settings;
+        }
 
         private void CheckFileExistence()
         {
@@ -28,7 +40,7 @@ namespace DecksOfCards
             List<Deck> decks;
             try
             {
-                decks = JsonConvert.DeserializeObject<List<Deck>>(output);
+                decks = JsonConvert.DeserializeObject<List<Deck>>(output, settings);
             }
             catch (JsonSerializationException)
             {

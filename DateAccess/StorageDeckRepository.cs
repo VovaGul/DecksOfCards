@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,7 +7,17 @@ namespace DecksOfCards
 {
     public class StorageDeckRepository : IRepository
     {
-        private readonly IStorage storage = new JSONFileStorage();
+        private readonly IStorage storage;
+
+        public StorageDeckRepository()
+        {
+            storage = new JSONFileStorage();
+        }
+
+        public StorageDeckRepository(string path, JsonSerializerSettings settings)
+        {
+            storage = new JSONFileStorage(path, settings);
+        }
 
         public void Create(Deck deck)
         {

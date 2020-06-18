@@ -42,12 +42,27 @@ namespace DecksOfCards
             }
         }
 
+        public Deck(string name, List<Card> cards)
+        {
+            CheckNameIsNotNull(name);
+            this.name = name;
+            Cards = cards;
+            Id = DeckId.GenerateId();
+        }
+
         [JsonConstructor]
         private Deck(string name, List<Card> cards, DeckId id)
         {
             Id = id;
             this.name = name;
             Cards = cards;
+        }
+
+        private static void CheckNameIsNotNull(string name)
+        {
+            if (name == null)
+                throw new ArgumentException
+                    ($"имя колоды не может быть определено как null");
         }
 
         private static void CheckCountOfCards(List<Card> cards)

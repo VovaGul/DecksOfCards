@@ -32,6 +32,10 @@ namespace DecksOfCards
                     case "gl":
                         GetAllHelp();
                         break;
+                    case "add":
+                    case "a":
+                        AddHelp();
+                        break;
                     case "mix":
                     case "m":
                         MixHelp();
@@ -61,6 +65,7 @@ namespace DecksOfCards
             sb.AppendLine("  help   | h    помощь по программе");
             sb.AppendLine("  get    | g    показать определенные колды");
             sb.AppendLine("  getall | gl   паказать все колоды");
+            sb.AppendLine("  add    | a    загрузить колоды из файла в программу");
             sb.AppendLine("  mix    | m    перемешать определенные колоды");
             sb.AppendLine("  sort   | s    отсортировать определенные колоды");
 
@@ -81,6 +86,15 @@ namespace DecksOfCards
         private void GetAllHelp()
         {
             Console.WriteLine("Использование: DecksOfCards.exe getall");
+        }
+
+        private void AddHelp()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("Использование: DecksOfCards.exe mix <файл1> <файл2> ... <файлN>");
+            sb.AppendLine("");
+            sb.AppendLine("Пареметры:");
+            sb.AppendLine(" файл   путь до файла с описанием колод, которые нужно создать");
         }
 
         private void MixHelp()

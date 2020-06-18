@@ -42,13 +42,6 @@ namespace DecksOfCards
             }
         }
 
-        public Deck(string name, List<Card> cards)
-        {
-            Id = DeckId.GenerateId();
-            this.name = name;
-            Cards = cards;
-        }
-
         [JsonConstructor]
         private Deck(string name, List<Card> cards, DeckId id)
         {

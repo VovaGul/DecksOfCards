@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DecksOfCards
 {
-    public class DeckId : IEquatable<DeckId>, IEquatable<int>
+    public struct DeckId : IEquatable<DeckId>, IEquatable<int>
     {
         [JsonProperty]
         private readonly int id;
@@ -32,7 +32,7 @@ namespace DecksOfCards
             if (ReferenceEquals(this, other))
                 return true;
 
-            return Equals(other as DeckId);
+            return Equals((DeckId)other);
         }
 
         public bool Equals(DeckId other)
@@ -53,14 +53,6 @@ namespace DecksOfCards
 
         public static bool operator ==(DeckId deckId1, DeckId deckId2)
         {
-            if (deckId1 is null)
-            {
-                if (deckId2 is null)
-                {
-                    return true;
-                }
-                return false;
-            }
             if (deckId1.Equals(deckId2))
                 return true;
             return false;
@@ -68,14 +60,6 @@ namespace DecksOfCards
 
         public static bool operator !=(DeckId deckId1, DeckId deckId2)
         {
-            if (deckId1 is null)
-            {
-                if (deckId2 is null)
-                {
-                    return false;
-                }
-                return true;
-            }
             if (!deckId1.Equals(deckId2))
                 return true;
             return false;
@@ -83,19 +67,11 @@ namespace DecksOfCards
 
         public static bool operator ==(DeckId deckId1, int deckId2)
         {
-            if (deckId1 is null)
-            {
-                return false;
-            }
             return deckId1.Equals(deckId2);
         }
 
         public static bool operator !=(DeckId deckId1, int deckId2)
         {
-            if (deckId1 is null)
-            {
-                return true;
-            }
             return !deckId1.Equals(deckId2);
         }
 

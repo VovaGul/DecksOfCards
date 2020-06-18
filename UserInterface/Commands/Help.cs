@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Linq;
+using System.Text;
 
 namespace DecksOfCards
 {
@@ -50,25 +51,31 @@ namespace DecksOfCards
 
         private void ProgramHelp()
         {
-            Console.WriteLine("Описание: Программа для рабаты с колодами");
-            Console.WriteLine();
-            Console.WriteLine("Использование: DecksOfCards.exe [команда]");
-            Console.WriteLine("Для получения сведений об определенной команде введите help <имя команды>");
-            Console.WriteLine();
-            Console.WriteLine("Команды:");
-            Console.WriteLine("  help   | h    помощь по программе");
-            Console.WriteLine("  get    | g    показать определенные колды");
-            Console.WriteLine("  getall | gl   паказать все колоды");
-            Console.WriteLine("  mix    | m    перемешать определенные колоды");
-            Console.WriteLine("  sort   | s    отсортировать определенные колоды");
+            var sb = new StringBuilder();
+            sb.AppendLine("Описание: Программа для рабаты с колодами");
+            sb.AppendLine();
+            sb.AppendLine("Использование: DecksOfCards.exe [команда]");
+            sb.AppendLine("Для получения сведений об определенной команде введите help <имя команды>");
+            sb.AppendLine();
+            sb.AppendLine("Команды:");
+            sb.AppendLine("  help   | h    помощь по программе");
+            sb.AppendLine("  get    | g    показать определенные колды");
+            sb.AppendLine("  getall | gl   паказать все колоды");
+            sb.AppendLine("  mix    | m    перемешать определенные колоды");
+            sb.AppendLine("  sort   | s    отсортировать определенные колоды");
+
+            Console.WriteLine(sb.ToString());
         }
 
         private void GetHelp()
         {
-            Console.WriteLine("Использование: DecksOfCards.exe get <id_колоды1> <id_колоды2> ... <id_колодыN>");
-            Console.WriteLine("");
-            Console.WriteLine("Пареметры:");
-            Console.WriteLine(" id_колоды   id колоды, информацию о которой необходимо показать");
+            var sb = new StringBuilder();
+            sb.AppendLine("Использование: DecksOfCards.exe get <id_колоды1> <id_колоды2> ... <id_колодыN>");
+            sb.AppendLine("");
+            sb.AppendLine("Пареметры:");
+            sb.AppendLine(" id_колоды   id колоды, информацию о которой необходимо показать");
+
+            Console.WriteLine(sb.ToString());
         }
 
         private void GetAllHelp()
@@ -78,18 +85,24 @@ namespace DecksOfCards
 
         private void MixHelp()
         {
-            Console.WriteLine("Использование: DecksOfCards.exe mix <id_колоды1> <id_колоды2> ... <id_колодыN>");
-            Console.WriteLine("");
-            Console.WriteLine("Пареметры:");
-            Console.WriteLine(" id_колоды   id колоды, которую нужно перемешать");
+            var sb = new StringBuilder();
+            sb.AppendLine("Использование: DecksOfCards.exe mix <id_колоды1> <id_колоды2> ... <id_колодыN>");
+            sb.AppendLine("");
+            sb.AppendLine("Пареметры:");
+            sb.AppendLine(" id_колоды   id колоды, которую нужно перемешать");
+
+            Console.WriteLine(sb.ToString());
         }
 
         private void SortHelp()
         {
-            Console.WriteLine("Использование: DecksOfCards.exe sort <id_колоды1> <id_колоды2> ... <id_колодыN>");
-            Console.WriteLine("");
-            Console.WriteLine("Пареметры:");
-            Console.WriteLine(" id_колоды   id колоды, которую нужно отсортировать");
+            var sb = new StringBuilder();
+            sb.AppendLine("Использование: DecksOfCards.exe sort <id_колоды1> <id_колоды2> ... <id_колодыN>");
+            sb.AppendLine("");
+            sb.AppendLine("Пареметры:");
+            sb.AppendLine(" id_колоды   id колоды, которую нужно отсортировать");
+
+            Console.WriteLine(sb.ToString());
         }
     }
 }

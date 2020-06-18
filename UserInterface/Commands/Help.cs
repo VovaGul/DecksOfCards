@@ -43,6 +43,7 @@ namespace DecksOfCards
                         Console.WriteLine("такой команды не существует");
                         break;
                 }
+                return;
             }
             ProgramHelp();
         }
